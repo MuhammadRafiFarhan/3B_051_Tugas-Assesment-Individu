@@ -1,0 +1,144 @@
+# CRUD Barang
+### Create Barang
+POST http://localhost:5000/barang
+Content-Type: application/json
+
+{
+    "NamaBarang": "Laptop",
+    "Satuan": "Unit",
+    "HargaSatuan": 1200.00,
+    "Stok": 10
+}
+
+### Get All Barang
+GET http://localhost:5000/barang
+
+### Get One Barang
+GET http://localhost:5000/barang/1
+
+### Update Barang
+PATCH http://localhost:5000/barang/1
+Content-Type: application/json
+
+{
+    "Stok": 5
+}
+
+### Delete Barang
+DELETE http://localhost:5000/barang/1
+
+# CRUD Kasir
+### Create Kasir
+POST http://localhost:5000/kasir
+Content-Type: application/json
+
+{
+    "Nama": "John Doe",
+    "HP": "081234567890"
+}
+
+### Get All Kasir
+GET http://localhost:5000/kasir
+
+### Get One Kasir
+GET http://localhost:5000/kasir/1
+
+### Update Kasir
+PATCH http://localhost:5000/kasir/1
+Content-Type: application/json
+
+{
+    "HP": "081234567891"
+}
+
+### Delete Kasir
+DELETE http://localhost:5000/kasir/1
+
+# CRUD Tenan
+### Create Tenan
+POST http://localhost:5000/tenan
+Content-Type: application/json
+
+{
+    "NamaTenan": "Warung Sate",
+    "HP": "081234567800"
+}
+
+### Get All Tenan
+GET http://localhost:5000/tenan
+
+### Get One Tenan
+GET http://localhost:5000/tenan/1
+
+### Update Tenan
+PATCH http://localhost:5000/tenan/1
+Content-Type: application/json
+
+{
+    "HP": "081234567801"
+}
+
+### Delete Tenan
+DELETE http://localhost:5000/tenan/1
+
+# CRUD Nota
+### Create Nota
+POST http://localhost:5000/nota
+Content-Type: application/json
+
+{
+    "KodeTenan": 1,
+    "KodeKasir": 1,
+    "TglNota": "2023-11-28",
+    "JamNota": "14:30",
+    "JumlahBelanja": 1500.00,
+    "Diskon": 10.00,
+    "Total": 1350.00
+}
+
+### Get All Nota
+GET http://localhost:5000/nota
+
+### Get One Nota
+GET http://localhost:5000/nota/1
+
+### Update Nota
+PATCH http://localhost:5000/nota/1
+Content-Type: application/json
+
+{
+    "Total": 1300.00
+}
+
+### Delete Nota
+DELETE http://localhost:5000/nota/1
+
+# CRUD BarangNota
+### Create BarangNota
+POST http://localhost:5000/barangnota
+Content-Type: application/json
+
+{
+    "KodeNota": 1,
+    "KodeBarang": 1,
+    "JumlahBarang": 2,
+    "HargaSatuan": 600.00,
+    "Jumlah": 1200.00
+}
+
+### Get All BarangNota
+GET http://localhost:5000/barangnota
+
+### Get One BarangNota
+GET http://localhost:5000/barangnota/1/1
+
+### Update BarangNota
+PATCH http://localhost:5000/barangnota/1/1
+Content-Type: application/json
+
+{
+    "JumlahBarang": 3
+}
+
+### Delete BarangNota
+DELETE http://localhost:5000/barangnota/1/1
